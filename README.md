@@ -114,3 +114,30 @@ source ~/.zshrc
 nvm install node
 
   ```
+
+
+## Instalar fuentes 
+
+Clone the powerline repository on Windows
+
+```bash
+
+git clone https://github.com/powerline/fonts.git
+
+```
+
+Open an admin PowerShell, navigate to the root of the repo and run this:
+
+```bash
+
+.\install.ps1
+
+```
+  
+Habilitar permisos Admin Power shield
+
+```bash
+
+Set-ExecutionPolicy Unrestricted
+
+```
