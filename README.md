@@ -107,9 +107,9 @@ plugins+=(zsh-nvm)
 export NVM_DIR="$HOME/.nvm"
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
-source ~/.zshrc
-
 # Usage :
+
+source ~/.zshrc
 
 nvm install node
 
