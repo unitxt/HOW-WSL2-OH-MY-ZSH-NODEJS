@@ -1,0 +1,8 @@
+{
+  "name": "zsh-instructions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:unitxt/zsh-instructions.git",
+  "author": "Joz <joz.gnz@gmail.com>",
+  "license": "MIT"
+}
