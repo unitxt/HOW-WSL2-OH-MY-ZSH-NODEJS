@@ -1,8 +1,8 @@
-# Zsh en Ububtu Subsystem Windows 10
+# Zsh on Ububtu Subsystem Windows 10
 
 Instrucciones de Instalación
 
-### Instalar ZSH
+### Instalar ZSH 
 
 Para instalar ZSH, en la terminal ejecutamos el siguiente comando:
 
@@ -52,7 +52,7 @@ Por último, volvemos a ejecutar el siguiente comando:
 chsh -s /usr/bin/zsh
 ```
 
-### Instalar zsh-nvm
+### Install zsh-nvm 💥💥
 
 Clone zsh-nvm into your custom plugins repo
 
@@ -60,13 +60,13 @@ Clone zsh-nvm into your custom plugins repo
 git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
 ```
 
-Then load as a plugin in your .zshrc
+Then load as a plugin in your .zshrc on top (before export ZSH)
 
 ```bash
 plugins+=(zsh-nvm)
 ```
 
-### Upgrade zsh-nvm
+### Upgrade zsh-nvm 💥💥
 
 ```bash
 nvm upgrade
@@ -77,8 +77,8 @@ Previous HEAD position was 2176894... v0.31.0
 HEAD is now at 56417f8... v0.31.3
 ```
 
-### Install zsh-nvm
-
+### Install zsh-nvm 💥💥
+ 
 You can install the latest Node.js nightlies or release candidates with nvm install nightly|rc. Aliases will automatically be created so you can easily nvm use nightly|rc in the future:
 
 ```bash
@@ -94,7 +94,7 @@ Clearing mirror cache...
 Done!
 ```
 
-### Config zsh-nvm
+### Config zsh-nvm 💥💥
 
 ```bash
 
@@ -115,38 +115,20 @@ nvm install node
 
   ```
 
-
-## Instalar fuentes 
-
-Clone the powerline repository on Windows
+### Install font ❤️❤️
 
 ```bash
-git clone https://github.com/powerline/fonts.git
+git clone https://github.com/tonsky/FiraCode.git
 ```
 
-Open an admin PowerShell, navigate to the root of the repo and run this:
+Edit settings.json Vs Code
 
 ```bash
-.\install.ps1
-```
-  
-Set Unrestricted Admin Power shield
-
-```bash
-Set-ExecutionPolicy Unrestricted
-```
-
-Fuente usada en VS CODE
-
-```bash
-
 "terminal.integrated.fontFamily": "Fira Code",
 "terminal.integrated.fontWeightBold": "900",
-
 ```
-
-### Hide username & machine name from prompt
-
+### Hide username & machine name from prompt 🔥🔥
+ 
 Open your .zshrc and paste this at the bottom:
 
 ```bash
@@ -159,7 +141,7 @@ prompt_context() {
 
 This makes only your username to appear. If you don't want that too, just comment out this line prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
 
-### How to shorten zsh prompt
+### How to shorten zsh prompt ✂️✂️
 
 ```bash
 # Step 1: check where oh-my-zsh installation is in ~/.zshrc
@@ -177,7 +159,7 @@ prompt_dir() {
 
 Once you save the change and reload your setting via source ~/.zshrc, you should be able to see your shorter prompt taking effects ✨ ✨ 
 
-## A workaround to you have unstaged changeserror when you need to update oh-my-zsh
+## A workaround to you have unstaged changeserror when you need to update oh-my-zsh 💩💩
 
 One quirk of oh-my-zsh installation is that it lives as a git repo in our system, and any subsequent upgrades we shall enjoy now become pulling new changes from the “mother” repo. Since we now have applied changes to shorten the prompt, directly pulling new changes would not be allowed unless we stash the changes. Luckily we only need the following command:
 
