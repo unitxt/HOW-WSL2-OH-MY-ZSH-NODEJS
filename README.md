@@ -30,6 +30,7 @@ Ejecutaremos el siguiente comando en la terminal e inmediatamente nos pedirá la
 ```bash
 chsh -s /usr/bin/zsh
 ```
+### WSL 1
 
 Solo en WSL1: Muchas veces eso no es suficiente, por lo que le tenemos que indicar al archivo de configuración (.bashrc) la terminal que debe de ejecutar y para eso, realizamos los siguientes pasos:
 
@@ -46,6 +47,9 @@ Esto con el fin de ejecutar siempre zsh como terminal por defecto y no tenga pro
 
 Para terminar, presionamos Ctrl + X y después Y para aceptar los cambios
 Para confirmar estos cambios en el archivo ejecutamos cat ~/.bashrc y corroboramos que estén las líneas que agregamos.
+
+### WSL 1 && WSL 2
+
 Por último, volvemos a ejecutar el siguiente comando:
 
 ```bash
@@ -70,8 +74,6 @@ Upgrade to the latest release of nvm:
 ```bash
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 ```
-
-
 ### Install node 💥💥
 
 You can install the latest Node.js nightlies or release candidates with nvm install nightly|rc. Aliases will automatically be created so you can easily nvm use nightly|rc in the future:
@@ -91,14 +93,14 @@ Add nvm to zshrc, It must be set before zsh-nvm is loaded.
 
 nano ~/.zshrc
 
-# add this before 
+# add this before zsh-nvm is loaded
 
 export NVM_DIR="$HOME/.nvm"
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 ```
 
-WSL1 1
+## WSL1 1 Config 
 
 ### Config zsh-nvm 💥💥
 
@@ -121,7 +123,9 @@ nvm install node
 
   ```
 
-### Install font ❤️❤️
+## Install font ❤️❤️
+
+Instal firecode or download another from nerdfonts.com
 
 ```bash
 git clone https://github.com/tonsky/FiraCode.git
@@ -133,7 +137,10 @@ Edit settings.json Vs Code
 "terminal.integrated.fontFamily": "Fira Code",
 "terminal.integrated.fontWeightBold": "900",
 ```
-### Hide username & machine name from prompt 🔥🔥
+
+## Agnoster Theme Config
+
+###  Hide username & machine name from prompt (Agnoster Theme)🔥🔥
  
 Open your .zshrc and paste this at the bottom:
 
@@ -177,16 +184,8 @@ $ upgrade_oh_my_zsh
 # Step 3: after upgrade, re-apply your changes that are needed to shorten the prompt
 $ git stash pop
 ```
-## Cómo configurar las llaves SSH 
+##  SSH Keys on  Ubuntu
 
 ```bash
 ssh-keygen
 ```
-
-
-
-
-
-
-
-
