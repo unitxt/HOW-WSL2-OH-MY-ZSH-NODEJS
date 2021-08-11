@@ -31,7 +31,7 @@ Ejecutaremos el siguiente comando en la terminal e inmediatamente nos pedirá la
 chsh -s /usr/bin/zsh
 ```
 
-Muchas veces eso no es suficiente, por lo que le tenemos que indicar al archivo de configuración (.bashrc) la terminal que debe de ejecutar y para eso, realizamos los siguientes pasos:
+Solo en WSL1: Muchas veces eso no es suficiente, por lo que le tenemos que indicar al archivo de configuración (.bashrc) la terminal que debe de ejecutar y para eso, realizamos los siguientes pasos:
 
 Ejecutamos el siguiente comando: nano ~/.bashrc
 En la parte superior del archivo agregamos las siguientes líneas:
@@ -54,45 +54,51 @@ chsh -s /usr/bin/zsh
 
 ### Install zsh-nvm 💥💥
 
-Clone zsh-nvm into your custom plugins repo
+Clone this repository somewhere (~/.zsh-nvm for example)
 
 ```bash
-git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm
+git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
 ```
-
-Then load as a plugin in your .zshrc on top (before export ZSH)
+Then source it in your .zshrc (or .bashrc)
 
 ```bash
-plugins+=(zsh-nvm)
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 ```
 
-### Upgrade zsh-nvm 💥💥
+Upgrade to the latest release of nvm:
 
 ```bash
-nvm upgrade
-Installed version is v0.31.0
-Checking latest version of nvm...
-Updating to v0.31.3...
-Previous HEAD position was 2176894... v0.31.0
-HEAD is now at 56417f8... v0.31.3
+source ~/.zsh-nvm/zsh-nvm.plugin.zsh
 ```
 
-### Install zsh-nvm 💥💥
- 
+
+### Install node 💥💥
+
 You can install the latest Node.js nightlies or release candidates with nvm install nightly|rc. Aliases will automatically be created so you can easily nvm use nightly|rc in the future:
 
 ```bash
 nvm install rc
-Downloading and installing node v8.0.0-rc.1...
-Downloading https://nodejs.org/download/rc//v8.0.0-rc.1/node-v8.0.0-rc.1-darwin-x64.tar.xz...
-######################################################################## 100.0%
-Computing checksum with shasum -a 256
-Checksums matched!
-Now using node v8.0.0-rc.1 (npm v5.0.0-beta.56)
-rc -> v8.0.0-rc.1
-Clearing mirror cache...
-Done!
 ```
+Update npm
+
+```bash
+npm install -g npm@7.20.5
+```
+
+Add nvm to zshrc, It must be set before zsh-nvm is loaded.
+
+```bash
+
+nano ~/.zshrc
+
+# add this before 
+
+export NVM_DIR="$HOME/.nvm"
+ [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+```
+
+WSL1 1
 
 ### Config zsh-nvm 💥💥
 
@@ -171,6 +177,16 @@ $ upgrade_oh_my_zsh
 # Step 3: after upgrade, re-apply your changes that are needed to shorten the prompt
 $ git stash pop
 ```
+## Cómo configurar las llaves SSH 
+
+```bash
+ssh-keygen
+```
+
+
+
+
+
 
 
 
