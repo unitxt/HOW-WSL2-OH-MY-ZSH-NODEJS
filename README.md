@@ -34,7 +34,7 @@ nano ~/.zshrc
 export NVM_DIR="$HOME/.nvm"
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 ```
-## Install fonts ❤️❤️
+## Install fonts
 Install a powerlinefont from [nerdfonts.com](https://www.nerdfonts.com/font-downloads)
 ```bash
 # Settings.json vs code example
@@ -42,7 +42,7 @@ Install a powerlinefont from [nerdfonts.com](https://www.nerdfonts.com/font-down
 "terminal.integrated.fontWeightBold": "500",
 ```
 # Bonus: Agnoster Theme Configs
-###  Hide username & machine name from prompt (Agnoster Theme)🔥🔥
+###  Hide username & machine name from prompt (Agnoster Theme)
 Open your .zshrc and paste this at the bottom:
 ```bash
 prompt_context() {
@@ -52,7 +52,7 @@ prompt_context() {
 }
 ```
 This makes only your username to appear. If you don't want that too, just comment out this line prompt_segment black default "%(!.%{%F{yellow}%}.)$USER"
-### How to shorten zsh prompt ✂️✂️
+### How to shorten zsh prompt 
 ```bash
 # Step 1: check where oh-my-zsh installation is in ~/.zshrc
 # Path to your oh-my-zsh installation.
@@ -67,7 +67,7 @@ prompt_dir() {
 }
 ```
 Once you save the change and reload your setting via source ~/.zshrc, you should be able to see your shorter prompt taking effects ✨ ✨ 
-## A workaround to you have unstaged changeserror when you need to update oh-my-zsh 💩💩
+## A workaround to you have unstaged changeserror when you need to update oh-my-zsh 
 
 One quirk of oh-my-zsh installation is that it lives as a git repo in our system, and any subsequent upgrades we shall enjoy now become pulling new changes from the “mother” repo. Since we now have applied changes to shorten the prompt, directly pulling new changes would not be allowed unless we stash the changes. Luckily we only need the following command:
 ```bash
@@ -78,10 +78,4 @@ $ upgrade_oh_my_zsh
 # Step 3: after upgrade, re-apply your changes that are needed to shorten the prompt
 $ git stash pop
 ```
-#  SSH Keys on  Ubuntu
-
-```bash
-ssh-keygen
-```
-
 
