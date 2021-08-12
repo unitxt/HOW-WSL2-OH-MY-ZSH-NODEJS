@@ -11,9 +11,10 @@ sh install.sh
 # Set zsh as default terminal
 chsh -s /usr/bin/zsh
 ```
-## Install zsh-nvm
-Clone this repository somewhere (~/.zsh-nvm for example)
+## Install [zsh-nvm](https://github.com/lukechilds/zsh-nvm)
+
 ```bash
+# Clone this repository somewhere (~/.zsh-nvm for example)
 git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
 # Source it in your .zshrc (or .bashrc)
 source ~/.zsh-nvm/zsh-nvm.plugin.zsh
@@ -68,7 +69,6 @@ prompt_dir() {
 ```
 Once you save the change and reload your setting via source ~/.zshrc, you should be able to see your shorter prompt taking effects ✨ ✨ 
 ## A workaround to you have unstaged changeserror when you need to update oh-my-zsh 
-
 One quirk of oh-my-zsh installation is that it lives as a git repo in our system, and any subsequent upgrades we shall enjoy now become pulling new changes from the “mother” repo. Since we now have applied changes to shorten the prompt, directly pulling new changes would not be allowed unless we stash the changes. Luckily we only need the following command:
 ```bash
 # Step 1: go to oh-my-zsh installation folder and stash the change you have made to the theme
