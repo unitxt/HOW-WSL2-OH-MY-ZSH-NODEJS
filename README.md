@@ -27,9 +27,8 @@ You can install the latest Node.js nightlies or release candidates with nvm inst
 # Example: nvm install 14.17.5
 nvm install <version>
 ```
-Add nvm env var to zshrc, It must be set before zsh-nvm is loaded
+Add nvm env var to zshrc, It must be set before zsh-nvm is loaded `nano ~/.zshrc`
 ```bash
-nano ~/.zshrc
 # Add before zsh-nvm is loaded
 export NVM_DIR="$HOME/.nvm"
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -43,7 +42,7 @@ Install a powerlinefont in windows from [nerdfonts.com](https://www.nerdfonts.co
 ```
 ### Install Theme
 
-Visit [powerlevel10k](https://github.com/romkatv/powerlevel10k), add theme to oh-my-zsh nano ~/.zshrc:
+Visit [powerlevel10k](https://github.com/romkatv/powerlevel10k), add theme to oh-my-zsh `nano ~/.zshrc`:
 
 ```bash
 ZSH_THEME="powerlevel10k/powerlevel10k"
