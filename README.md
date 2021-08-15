@@ -1,4 +1,4 @@
-# WSL OH MY ZSH
+# HOW WSL2 && OH MY ZSH + NODEJS
 ### Install WSL2
 How [Install wsl2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 ### Install ZSH && Oh-my-zsh
