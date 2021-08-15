@@ -1,5 +1,5 @@
 # WSL OH MY ZSH
-## Install WSL2
+### Install WSL2
 How [Install wsl2](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 ### Install ZSH && Oh-my-zsh
 ```bash
