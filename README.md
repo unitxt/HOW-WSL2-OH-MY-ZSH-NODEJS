@@ -26,8 +26,6 @@ You can install the latest Node.js nightlies or release candidates with nvm inst
 ```bash
 # Example: nvm install 14.17.5
 nvm install <version>
-# Update npm
-npm install -g npm@7.20.5
 ```
 Add nvm env var to zshrc, It must be set before zsh-nvm is loaded
 ```bash
