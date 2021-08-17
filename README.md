@@ -54,4 +54,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 ```
+### WSL2 config for Windows Terminal
 
+To fix it you need to modify the settings.json file of Windows Terminal (which you can open with keyboard shotrcut: Ctrl + ,).
+
+Once in the settings json file find the WSL entry and set the startingDirectory to the network path of your WSL home directory:
+
+```json
+{
+    "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e43243e40}",
+    "hidden": false,
+    "name": "Ubuntu",
+    "source": "Windows.Terminal.Wsl",
+    "startingDirectory": "//wsl$/Ubuntu/home/<user>/"
+},
+```
