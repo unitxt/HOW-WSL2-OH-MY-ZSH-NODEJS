@@ -48,6 +48,10 @@ Visit [powerlevel10k](https://github.com/romkatv/powerlevel10k), add theme to oh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ```
  
-
-
+ ### Remove ZSH Underline
+```bash
+ (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+```
 
