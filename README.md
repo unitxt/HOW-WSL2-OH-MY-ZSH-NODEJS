@@ -69,3 +69,12 @@ Once in the settings json file find the WSL entry and set the startingDirectory 
     "startingDirectory": "//wsl$/Ubuntu/home/<user>/"
 },
 ```
+### Remove Bash Dir Background
+
+Copy and paste at bottom of ~/.bashrc and source it, [stackoverflow](https://stackoverflow.com/questions/40574819/how-to-remove-dir-background-in-ls-color-output)
+
+```bash
+eval "$(dircolors -p | \
+    sed 's/ 4[0-9];/ 01;/; s/;4[0-9];/;01;/g; s/;4[0-9] /;01 /' | \
+    dircolors /dev/stdin)"
+```
