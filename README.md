@@ -56,7 +56,7 @@ ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 ```
 ### WSL2 config for Windows Terminal
 
-To fix it you need to modify the settings.json file of Windows Terminal (which you can open with keyboard shotrcut: Ctrl + ,).
+Start Terminal on WSL Directory, to fix it you need to modify the settings.json file of Windows Terminal (which you can open with keyboard shotrcut: Ctrl + ,).
 
 Once in the settings json file find the WSL entry and set the startingDirectory to the network path of your WSL home directory:
 
@@ -71,7 +71,7 @@ Once in the settings json file find the WSL entry and set the startingDirectory 
 ```
 ### Remove Bash Dir Background
 
-Copy and paste at bottom of ~/.bashrc and source it, [stackoverflow](https://stackoverflow.com/questions/40574819/how-to-remove-dir-background-in-ls-color-output)
+Copy and paste at bottom of ~/.zshrc and source it, [stackoverflow](https://stackoverflow.com/questions/40574819/how-to-remove-dir-background-in-ls-color-output)
 
 ```bash
 eval "$(dircolors -p | \
